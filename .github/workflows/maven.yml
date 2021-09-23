@@ -24,4 +24,4 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn clean test
+      run: mvn -B package --file uitest/pom.xml
