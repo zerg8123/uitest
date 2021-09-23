@@ -32,7 +32,12 @@
       <version>2.15.0</version>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jxr-plugin -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-junit5</artifactId>
+      <version>2.15.0</version>
+      <scope>test</scope>
+    </dependency>
 
   </dependencies>
 
