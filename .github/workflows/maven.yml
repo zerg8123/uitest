@@ -26,11 +26,5 @@ jobs:
     - name: Build with Maven
       run: 
         mvn clean test --file uitest/pom.xml
-    - name: Allure Report with history
-      uses: simple-elf/allure-report-action@v1.5
-      with:
-         allure_report: --file uitest/target/site/allure-maven-plugin/index.html
-         # Folder with gh-pages branch
-         gh_pages: --file uitest/target/site/allure-maven-plugin/index.html 
 
 
