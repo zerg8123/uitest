@@ -24,6 +24,12 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn clean test --file uitest/pom.xml
+      run: 
+        mvn clean test --file uitest/pom.xml
+        mvn allure:report
+    - name: Allure Report with history
+      uses: simple-elf/allure-report-action@v1.5
+      with:
+         allure_report: --file uitest/target/site/allure-maven-plugin/index.html
 
 
