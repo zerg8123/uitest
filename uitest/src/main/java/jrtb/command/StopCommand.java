@@ -3,7 +3,7 @@ package jrtb.command;
 import jrtb.service.SendBotMessageService;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-public class StopCommand implements Command{
+public class StopCommand implements Command {
 
     private final SendBotMessageService sendBotMessageService;
 
@@ -12,6 +12,7 @@ public class StopCommand implements Command{
     public StopCommand(SendBotMessageService sendBotMessageService) {
         this.sendBotMessageService = sendBotMessageService;
     }
+
     @Override
     public void execut(Update update) {
         sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), STOP_MESSAGE);

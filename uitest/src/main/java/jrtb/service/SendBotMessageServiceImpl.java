@@ -10,11 +10,11 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
  * Implementation of {@link SendBotMessageService} interface.
  */
 @Service
-public class SendBotMessageServiceImpl  implements SendBotMessageService{
+public class SendBotMessageServiceImpl implements SendBotMessageService {
     private final TelegramBot telegramBot;
 
     @Autowired
-    public SendBotMessageServiceImpl (TelegramBot telegramBot) {
+    public SendBotMessageServiceImpl(TelegramBot telegramBot) {
         this.telegramBot = telegramBot;
     }
 
