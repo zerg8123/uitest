@@ -13,7 +13,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -30,5 +30,7 @@ jobs:
       uses: simple-elf/allure-report-action@v1.5
       with:
          allure_report: --file uitest/target/site/allure-maven-plugin/index.html
+         # Folder with gh-pages branch
+         gh_pages: --file uitest/target/site/allure-maven-plugin/index.html 
 
 
